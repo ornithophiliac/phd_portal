@@ -1,0 +1,42 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ResearchConnect-Navigating PhD Journeys Together</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+   
+
+<body>
+    <header>
+		<img src="{% static 'images/logo.jpg' %}" alt="Logo">
+        <nav>
+          <ul>
+            <li class="active">
+                <a href="{% url 'home' %}">Home</a>
+            </li>
+            <li><a href="#">News</a></li>
+            <li >
+                <a href="{% url 'about' %}">About Us</a>
+            </li>
+            
+            <li><a href="#">Events</a></li>
+            <li><a href="#">Scholars</a></li>
+            <li><a href="#">Summary</a></li>
+            <li><a href="#">Gallery</a></li>
+            <li><a href="#">Symposium-6</a></li>
+            <li class="contact-us"><a href="#">Contact Us</a></li>
+            <li >
+              
+              <a href="{% url 'register' %}">Register</a>
+          </li>
+            <li class="search-bar">
+              <input type="text" placeholder="Search">
+            </li>
+          </ul>
+        </nav>
+      </header>
+      {% block start %}{% endblock %}
+</body>
+</html>

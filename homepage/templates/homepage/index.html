@@ -1,0 +1,133 @@
+{% extends 'base.html' %} {% block start %}
+
+<div class="main-container">
+  <table align="center" cellspacing="1" cellpadding="5" border="0">
+    <tr>
+      <td>
+        <div class="left">
+          <table>
+            <tr>
+              <td style="background-color: #f5f5f5">
+                <h3 align="center">
+                  &nbsp &nbsp &nbsp  COMPLETED &nbsp &nbsp
+                  &nbsp 
+                </h3>
+                <h5 align="center">45</h5>
+              </td>
+            </tr>
+
+            <tr>
+              <td style="background-color: #cccccc">
+                <h3 align="center">&nbsp GUIDE QUOTA &nbsp   </h3>
+              </td>
+            </tr>
+
+            <tr>
+              <td style="background-color: #333333">
+                <h3 align="center">
+                  &nbsp &nbsp  ONGOING &nbsp &nbsp 
+                </h3>
+                <h5 align="center">45</h5>
+              </td>
+            </tr>
+          </table>
+        </div>
+      </td>
+
+      <td>
+        <div class="background-image">
+          {% load static %} <img src="{% static 'images/ternagate2.jpg' %}"/>
+          <a href="next-page.html" class="register-link">Register</a>
+        </div>
+      </td>
+
+      <td>
+        <div class="right">
+          <table>
+            <tr>
+              <td style="background-color:#f5f5f5">
+                <h1 align="center">
+                  &nbsp &nbsp &nbsp FUNDING&nbsp &nbsp &nbsp &nbsp 
+                </h1>
+                <h2 align="center">30</h2>
+              </td>
+            </tr>
+
+            <tr>
+              <td style="background-color: #cccccc">
+                <h3 align="center">
+                   PAPER <br>&nbsp &nbsp &nbsp  & PUBLICATION/IPR &nbsp &nbsp
+                  &nbsp &nbsp
+                </h3>
+              </td>
+            </tr>
+
+            <tr>
+              <td style="background-color: #333333">
+                <h1 align="center">
+                  &nbsp &nbsp &nbsp DOWNLOADS &nbsp &nbsp  &nbsp  &nbsp 
+                </h1>
+                <h2 align="center">30</h2>
+              </td>
+            </tr>
+          </table>
+        </div>
+      </td>
+    </tr>
+  </table>
+</div>
+        
+<div class="scrollable-table">
+  <table align="centre" border="1" cellspacing="0">
+    <tr>
+      <td>
+        <table>
+          <tr>
+            <th colspan="5">REGISTRATION DETAIL</th>
+          </tr>
+              <tr>
+                <td>No.</td>
+                <td>Type of reg.</td>
+                <td>Completed</td>
+                <td>Ongoing</td>
+                <td>Total</td>
+                </tr>
+          {% for detail in registration_details %}
+          <tr>
+            <td>{{ detail.id }}</td>
+            <td>{{ detail.type_of_reg }}</td>
+            <td>{{ detail.completed }}</td>
+            <td>{{ detail.ongoing }}</td>
+            <td>{{ detail.total }}</td>
+          </tr>
+          {% endfor %}
+        </table>
+      </td>
+      <td>
+        <table>
+          <tr>
+          <th colspan="5">REGISTRATION DETAIL</th>
+          </tr>
+            <tr>
+              <td>No.</td>
+              <td>Type of reg.</td>
+              <td>Completed</td>
+              <td>Ongoing</td>
+              <td>Total</td>
+              </tr>
+        {% for detail in registration_details %}
+        <tr>
+          <td>{{ detail.id }}</td>
+          <td>{{ detail.type_of_reg }}</td>
+          <td>{{ detail.completed }}</td>
+          <td>{{ detail.ongoing }}</td>
+          <td>{{ detail.total }}</td>
+        </tr>
+        {% endfor %}
+      </table>
+      </td>
+    </tr>  
+</table>
+</div>
+{% endblock %}
+
