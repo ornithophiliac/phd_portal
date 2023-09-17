@@ -24,5 +24,8 @@ urlpatterns = [
     path('',home,name="home"),
     path('home/',home,name="home"),
     path('about/',about,name="about"),
-    path('register/',register,name="register"),
+    
+    # path('login/', login_view, name='login'),
+    # path('signup/', signup_view, name='signup'),
+    path('login/', login, name="login"),
 ]

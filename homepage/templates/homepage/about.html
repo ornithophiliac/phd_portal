@@ -1,6 +1,52 @@
 {% extends 'base.html' %} {% block start %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>About Us</title>
+    <style>
+        /* Add your CSS styles here */
+        .container {
+            position: relative;
+            width: 100%;
+            height: 100vh;
+            overflow: hidden;
+        }
 
-<div class="about-header">
-  <h1>About Us</h1>
-</div>
-{% endblock %}
+        .video-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            opacity: 0.7; /* Adjust opacity as needed */
+        }
+
+        .content {
+            position: absolute;
+            top: 50%;
+            left: 20px; /* Adjust left padding to your preference */
+            transform: translateY(-50%);
+            color: #fff;
+            z-index: 1;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+      <video width="640" height="360" class="video-bg">
+          
+        {% load static %} <source src="{{images/Untitled design.mp4 }}" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <div class="content">
+            <h2>About Us</h2>
+            <p>
+                Home>>About us
+            </p>
+            
+        </div>
+    </div>
+</body>
+</html>
+{%endblock%}

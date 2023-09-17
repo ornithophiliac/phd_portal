@@ -1,0 +1,20 @@
+{% comment %} <!DOCTYPE html>
+<html>
+<head>
+    <title>Signup</title>
+</head>
+<body>
+    <h2>Signup</h2>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.first_name.label_tag }} {{ form.first_name }}
+        {{ form.last_name.label_tag }} {{ form.last_name }}
+        {{ form.program.label_tag }} {{ form.program }}
+        {{ form.student_id.label_tag }} {{ form.student_id }}
+        {{ form.password1.label_tag }} {{ form.password1 }}
+        {{ form.password2.label_tag }} {{ form.password2 }}
+        <button type="submit">Signup</button>
+    </form>
+    <a href="{% url 'login' %}">Login</a>
+</body>
+</html> {% endcomment %}
